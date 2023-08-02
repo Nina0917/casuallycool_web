@@ -1,9 +1,12 @@
-
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div>
-      Welcome to casuallycool official website!
+      {/* Navbar */}
+      { /*<Navbar /> */}
+      <Navbar />
+
     </div>
   );
 }

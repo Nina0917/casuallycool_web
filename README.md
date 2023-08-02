@@ -39,3 +39,15 @@ Past Classes
 - [Original Choreo by YiHong Liu](https://www.instagram.com/p/Cke4chTPD9L/)
 - ["Ditto" - NewJeans](https://www.youtube.com/watch?v=veorxMADmxY)
 - ["MOONLIGHT SUNRISE " - TWICE](https://www.youtube.com/watch?v=G4sA_d-5YJg)
+
+## Bugs
+
+After adding new dependencies to the project using "npm install", try to use "docker-compose up" restart containers, dependencies does not show up.
+
+- should use "docker-compose up -d --build" command instead
+- When you add new dependencies to your project using "npm install", it modifies your project's package.json file
+- The --build flag ensures that Docker Compose rebuilds any images that have changes in their build context (such as changes to your Dockerfile or changes in dependencies like package.json).
+
+Tailwind does not work
+
+- tailwind.config.js is not configured correct, should use this [link](https://tailwindcss.com/docs/guides/create-react-app)
