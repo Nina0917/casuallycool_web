@@ -1,8 +1,8 @@
-version: "1.0"
+version: "3.7"
 
 services:
   sample:
-    container_name: casuallycool_web
+    container_name: casuallycool
     build:
       context: .
       dockerfile: Dockerfile
@@ -12,4 +12,4 @@ services:
     ports:
       - 3001:3000
     environment:
-      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
