@@ -6,17 +6,15 @@
 
 ## Website Structure
 
-- Header & Footer
+- Header & Footer (Nina)
 
-- Main Page
+- Main Page (Amber)
 
-- Team
+- Team (Vian)
 
-- Performances & Past Classes
+- Performances & Past Classes (Vian)
 
-- Events
-
-- Contact
+- Events (Vian)
 
 ## Assests
 
