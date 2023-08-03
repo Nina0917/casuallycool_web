@@ -2,19 +2,14 @@ import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import Logo from '../assets/avatar_no_background.png'
 import {
-    ArrowPathIcon,
     Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
     UserPlusIcon,
     CubeTransparentIcon,
     FaceSmileIcon,
     GlobeAltIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 // const products = [
 //     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -65,6 +60,9 @@ export default function Navbar() {
                                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                             </button>
                         </div>
+
+                        <div className='hidden lg:flex flex-1'></div>
+
                         <Popover.Group className="hidden lg:flex lg:gap-x-12">
                             <Popover className="relative">
                                 <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
@@ -132,7 +130,6 @@ export default function Navbar() {
                         Log in <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div> */}
-                        <div className='hidden lg:flex flex-1'></div>
 
                     </div>
 
