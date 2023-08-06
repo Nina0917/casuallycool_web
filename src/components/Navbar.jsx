@@ -34,17 +34,17 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-export default function Navbar() {
+const Navbar = ({ onEventClick }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
         <header>
             {/* <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"> */}
-            <nav id="navbar" className="fixed inset-x-0 z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue" aria-label="Global">
-                <div className="mx-auto px-4 sm:px-12 xl:max-w-6xl xl:px-0">
+            <nav id="navbar" className="fixed z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue" aria-label="Global">
+                <div id="navbar-center" className="mx-auto px-4 sm:px-12 xl:max-w-6xl">
                     <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
                         <div className="flex lg:flex-1">
-                            <a href="#" className="-m-1.5 p-1.5">
+                            <a className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
                                 {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
                                 <img src={Logo} alt="logo" style={{ width: "90px" }} />
@@ -85,6 +85,7 @@ export default function Navbar() {
                                                 <div
                                                     key={item.name}
                                                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+
                                                 >
                                                     <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
@@ -92,7 +93,7 @@ export default function Navbar() {
                                                     <div className="flex-auto">
                                                         <a href={item.href} className="block font-semibold text-gray-900">
                                                             {item.name}
-                                                            <span className="absolute inset-0" />
+                                                            <span className="absolute inset-0" onClick={() => onEventClick(item.name)} />
                                                         </a>
                                                         <p className="mt-1 text-gray-600">{item.description}</p>
                                                     </div>
@@ -225,3 +226,5 @@ export default function Navbar() {
         </header>
     )
 }
+
+export default Navbar;

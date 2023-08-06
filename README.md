@@ -16,6 +16,10 @@
 
 - Events (Vian)
 
+## Meeting Schedule
+
+Thursday - 12pm (Nina), 2pm (Vian and Amber)
+
 ## Assests
 
 [Team Cool Members Bio](https://docs.google.com/spreadsheets/d/1hc4pCpTPSeSfhhpOfx_QUp473Pjtu0hQKs0hZIrGRrE/edit?usp=sharing)
@@ -49,3 +53,10 @@ After adding new dependencies to the project using "npm install", try to use "do
 Tailwind does not work
 
 - tailwind.config.js is not configured correct, should use this [link](https://tailwindcss.com/docs/guides/create-react-app)
+
+Don't know how to send child component click event to its parent
+
+- define state and a function in the parent component
+- pass the function as props to the child component
+- add onClick event to elements in the child component. When these elements get clicked, they trigger the function of the parent component
+- The functioj gets passed determines parameters that are passed through ("Audition", "Class Trail", etc.) and resets the state
