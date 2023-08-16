@@ -19,11 +19,9 @@ function ClassTrial() {
                         <div className='mt-6 flex items-center'>
                             <ClockIcon className="inline h-6 w-6 mr-1" />
                             <span className=' inline-block text-gray-900 align-text-bottom'>
-                                September 17th
+                                October 26th & November 2nd
                             </span>
                         </div>
-
-
                     </div>
                     <div> <img src={AudImg} alt="logo" /></div>
 
@@ -31,21 +29,24 @@ function ClassTrial() {
 
                 <div className='-mx-4 sm:-mx-12 lg:mx-0'> {/* paragraphs container*/}
 
+
+
                     <div className='mx-auto max-w-3xl space-y-12 py-12 px-4 text-gray-600 sm:px-12 xl:px-0'>
-                        <div className="space-y-4">
-                            <p>Whether you aspire to be a part of Team Cool, wish to participate in dance performances or video shootings, or even dream of joining our competitive team to represent CasuallyCool in various dance competitions, we welcome you to join us for the auditions.</p>
-                            <p>To accommodate everyone's preferences and ensure a diverse range of talent, we have opened up two options for auditioning. You can choose the format that suits you best:</p>
-                        </div>
+                        <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">THREE POINTS TO REMEMBER!</h2>
+
 
                         <div class="space-y-6 border-b pb-6 border-gray-300">
 
                             <div className="space-y-4">
-                                <p>1. Present a Choreography Performance: Prepare a choreographed piece of your choice, lasting between 40 to 60 seconds. This allows you to showcase your individual style and creativity.</p>
-                                <p>2.  Chore Learning on the Spot: Our talented choreographer will teach a choreography on the day of the audition. Participants will learn the same choreography during the teaching period and then perform it for evaluation. </p>
+                                <p>1.You MUST pre-register for <span class="font-semibold">EACH</span> class you want to attend! Each class has its <span class="font-semibold">OWN</span> google form which is in the <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a> in the bio.
+                                    (Ex. To attend two classes, you must register for each class on their OWN google form.</p>
+                                <p>2. It costs <span class="font-semibold">$2</span> cash at the door OR alternatively, you can e-transfer $2 pre-advance to <span class="font-semibold">17cx9@queensu.ca</span> </p>
+                                <p>3. CLEARER INSTRUCTIONS ARE ON THE GOOGLE FORM WHICH IS LOCATED ON THE <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a> IN OUR
+                                    <a href="https://www.instagram.com/casuallycooldance/?hl=en" class="text-blue-600 visited:text-purple-600">INSTAGRAM</a> SO PLEASE FOLLOW THE PROCEDURES CAREFULLY!</p>
                             </div>
                         </div>
 
-                        <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">Stay tuned to our Instagram for announcements and updates, and join our Discord server to engage with our community and receive real-time updates on audition information and timings.</h2>
+                        <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">See you soon!</h2>
 
 
                     </div>
