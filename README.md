@@ -60,3 +60,11 @@ Don't know how to send child component click event to its parent
 - pass the function as props to the child component
 - add onClick event to elements in the child component. When these elements get clicked, they trigger the function of the parent component
 - The functioj gets passed determines parameters that are passed through ("Audition", "Class Trail", etc.) and resets the state
+
+Change cursor to clickable element
+
+```
+<a href="#" class="cursor-pointer">
+    <img src="your-image-source.jpg" alt="Your Image" class="block w-full h-auto" />
+</a>
+```

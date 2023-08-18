@@ -56,10 +56,35 @@ function classNames(...classes) {
 
 const Navbar = ({ onEventClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
     <header>
       {/* <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"> */}
+    return (
+        <header>
+            {/* <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"> */}
+            <nav id="navbar" className="fixed z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue" aria-label="Global">
+                <div id="navbar-center" className="mx-auto px-4 sm:px-12 xl:max-w-6xl">
+                    <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
+                        <div className="flex lg:flex-1">
+                            <a className="-m-1.5 p-1.5">
+                                <span className="sr-only">Your Company</span>
+                                {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
+                                <a href="#" class="cursor-pointer" onClick={() => onEventClick('Home')}>
+                                    <img src={Logo} alt="logo" style={{ width: "90px" }} className='' />
+                                </a>
+
+                            </a>
+                        </div>
+                        <div className="flex lg:hidden">
+                            <button
+                                type="button"
+                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                                onClick={() => setMobileMenuOpen(true)}
+                            >
+                                <span className="sr-only">Open main menu</span>
+                                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                            </button>
+                        </div>
 
       <nav
         id="navbar"
