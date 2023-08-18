@@ -1,7 +1,8 @@
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import Logo from '../assets/avatar_no_background.png'
+import { Fragment, useState } from "react";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import Logo from "../assets/avatar_no_background.png";
 import {
+
     Bars3Icon,
     XMarkIcon,
     UserPlusIcon,
@@ -13,6 +14,9 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Member from './Member'
 import Video from './Video'
 
+
+
+
 // const products = [
 //     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
 //     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
@@ -22,89 +26,124 @@ import Video from './Video'
 // ]
 
 const events = [
-    { name: 'Audition Season', description: 'Join our executive team through an audition', href: '#', icon: UserPlusIcon },
-    { name: 'Class Trial', description: 'Free Trial Class week for new dancers', href: '#', icon: CubeTransparentIcon },
-    { name: 'Dance Recital', description: 'Come to see our annual dance recital', href: '#', icon: FaceSmileIcon },
-    { name: 'RPD', description: 'Random Dance Challenge for your favourite KPOP sons', href: '#', icon: GlobeAltIcon },
 
-]
-   
+  {
+    name: "Audition Season",
+    description: "Join our executive team through an audition",
+    href: "#",
+    icon: UserPlusIcon,
+  },
+  {
+    name: "Class Trial",
+    description: "Free Trial Class week for new dancers",
+    href: "#",
+    icon: CubeTransparentIcon,
+  },
+  {
+    name: "Dance Recital",
+    description: "Come to see our annual dance recital",
+    href: "#",
+    icon: FaceSmileIcon,
+  },
+  {
+    name: "RPD",
+    description: "Random Dance Challenge for your favourite KPOP sons",
+    href: "#",
+    icon: GlobeAltIcon,
+  },
+];
+
 // const callsToAction = [
 //     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
 //     { name: 'Contact sales', href: '#', icon: PhoneIcon },
 // ]
 
 function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 const Navbar = ({ onEventClick }) => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  return (
+    <header>
+      <nav
+        id="navbar"
+        className="fixed z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue"
+        aria-label="Global"
+      >
+        <div id="navbar-center" className="mx-auto px-4 sm:px-12 xl:max-w-6xl">
+          <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
+            <div className="flex lg:flex-1">
+              <a className="-m-1.5 p-1.5 href=home">
+                <span className="sr-only">Your Company</span>
+                {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
+                <img src={Logo} alt="logo" style={{ width: "90px" }} />
+              </a>
+            </div>
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(true)}
+              >
+                <span className="sr-only">Open main menu</span>
+                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
 
-    return (
-        <header>
-            {/* <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global"> */}
-            <nav id="navbar" className="fixed z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue" aria-label="Global">
-                <div id="navbar-center" className="mx-auto px-4 sm:px-12 xl:max-w-6xl">
-                    <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
-                        <div className="flex lg:flex-1">
-                            <a className="-m-1.5 p-1.5">
-                                <span className="sr-only">Your Company</span>
-                                {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
-                                <img src={Logo} alt="logo" style={{ width: "90px" }} />
-                            </a>
-                        </div>
-                        <div className="flex lg:hidden">
-                            <button
-                                type="button"
-                                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                                onClick={() => setMobileMenuOpen(true)}
+            <div className="hidden lg:flex flex-1"></div>
+
+            <Popover.Group className="hidden lg:flex lg:gap-x-12">
+              <Popover className="relative">
+                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+                  Events
+                  <ChevronDownIcon
+                    className="h-5 w-5 flex-none text-gray-400"
+                    aria-hidden="true"
+                  />
+                </Popover.Button>
+
+                <Transition
+                  as={Fragment}
+                  enter="transition ease-out duration-200"
+                  enterFrom="opacity-0 translate-y-1"
+                  enterTo="opacity-100 translate-y-0"
+                  leave="transition ease-in duration-150"
+                  leaveFrom="opacity-100 translate-y-0"
+                  leaveTo="opacity-0 translate-y-1"
+                >
+                  <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                    <div className="p-4">
+                      {events.map((item) => (
+                        <div
+                          key={item.name}
+                          className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
+                        >
+                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                            <item.icon
+                              className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                              aria-hidden="true"
+                            />
+                          </div>
+                          <div className="flex-auto">
+                            <a
+                              href={item.href}
+                              className="block font-semibold text-gray-900"
                             >
-                                <span className="sr-only">Open main menu</span>
-                                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                            </button>
+                              {item.name}
+                              <span
+                                className="absolute inset-0"
+                                onClick={() => onEventClick(item.name)}
+                              />
+                            </a>
+                            <p className="mt-1 text-gray-600">
+                              {item.description}
+                            </p>
+                          </div>
                         </div>
-
-                        <div className='hidden lg:flex flex-1'></div>
-
-                        <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                            <Popover className="relative">
-                                <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-                                    Events
-                                    <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                                </Popover.Button>
-
-                                <Transition
-                                    as={Fragment}
-                                    enter="transition ease-out duration-200"
-                                    enterFrom="opacity-0 translate-y-1"
-                                    enterTo="opacity-100 translate-y-0"
-                                    leave="transition ease-in duration-150"
-                                    leaveFrom="opacity-100 translate-y-0"
-                                    leaveTo="opacity-0 translate-y-1"
-                                >
-                                    <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                                        <div className="p-4">
-                                            {events.map((item) => (
-                                                <div
-                                                    key={item.name}
-                                                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-
-                                                >
-                                                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                                                        <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
-                                                    </div>
-                                                    <div className="flex-auto">
-                                                        <a href={item.href} className="block font-semibold text-gray-900">
-                                                            {item.name}
-                                                            <span className="absolute inset-0" onClick={() => onEventClick(item.name)} />
-                                                        </a>
-                                                        <p className="mt-1 text-gray-600">{item.description}</p>
-                                                    </div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                        {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                      ))}
+                    </div>
+                    {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                                     {callsToAction.map((item) => (
                                         <a
                                             key={item.name}
@@ -116,9 +155,10 @@ const Navbar = ({ onEventClick }) => {
                                         </a>
                                     ))}
                                 </div> */}
-                                    </Popover.Panel>
-                                </Transition>
-                            </Popover>
+                  </Popover.Panel>
+                </Transition>
+              </Popover>
+
 
                             <a 
                             href="Member" 
@@ -149,10 +189,15 @@ const Navbar = ({ onEventClick }) => {
                             </a>
                         </Popover.Group>
                         {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+
                     <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
                         Log in <span aria-hidden="true">&rarr;</span>
                     </a>
                 </div> */}
+          </div>
+        </div>
+      </nav>
+
 
                     </div>
 
