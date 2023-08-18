@@ -10,12 +10,14 @@ import {
     GlobeAltIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Member from './Member'
+import Video from './Video'
 
 // const products = [
 //     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
 //     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
 //     { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-//     { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+//     { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlu sIcon },
 //     { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 // ]
 
@@ -23,8 +25,10 @@ const events = [
     { name: 'Audition Season', description: 'Join our executive team through an audition', href: '#', icon: UserPlusIcon },
     { name: 'Class Trial', description: 'Free Trial Class week for new dancers', href: '#', icon: CubeTransparentIcon },
     { name: 'Dance Recital', description: 'Come to see our annual dance recital', href: '#', icon: FaceSmileIcon },
-    { name: 'RPD', description: 'Random Dance Challenge for your favourite KPOP sons', href: '#', icon: GlobeAltIcon }
+    { name: 'RPD', description: 'Random Dance Challenge for your favourite KPOP sons', href: '#', icon: GlobeAltIcon },
+
 ]
+   
 // const callsToAction = [
 //     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
 //     { name: 'Contact sales', href: '#', icon: PhoneIcon },
@@ -116,10 +120,28 @@ const Navbar = ({ onEventClick }) => {
                                 </Transition>
                             </Popover>
 
-                            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                                Team
+                            <a 
+                            href="Member" 
+                            
+                            onClick={(e) => {
+                                e.preventDefault();
+                                onEventClick('Member');
+                            }}
+                        
+                            className="text-sm font-semibold leading-6 text-gray-900" 
+                            >
+                                Member
                             </a>
-                            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+                            <a 
+                                href="Videos" 
+                            
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    onEventClick('Video');
+                                }}
+                            
+                                className="text-sm font-semibold leading-6 text-gray-900" 
+                                >
                                 Videos
                             </a>
                             <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
@@ -191,17 +213,29 @@ const Navbar = ({ onEventClick }) => {
                                     )}
                                 </Disclosure>
                                 <a
-                                    href="#"
+                                    href="Member"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        onEventClick('Member');
+                                        console.log("go to member")
+                                    }}
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
                                     Team
                                 </a>
+
                                 <a
-                                    href="#"
+                                    href="Video"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        onEventClick('Video');
+                                        console.log("go to video")
+                                    }}
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                 >
-                                    Team
+                                    Videos
                                 </a>
+
                                 <a
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
@@ -209,14 +243,7 @@ const Navbar = ({ onEventClick }) => {
                                     Contact
                                 </a>
                             </div>
-                            {/* <div className="py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Log in
-                                </a>
-                            </div> */}
+
                         </div>
                     </div>
                 </Dialog.Panel>
