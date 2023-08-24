@@ -6,6 +6,7 @@ import Values from "./Values";
 import Gallery from "./Gallery";
 import Milestone from "./Milestone";
 import JoinMethod from "./JoinMethod";
+import SocialContacts from "./SocialContact";
 import { Link } from "react-scroll";
 
 const Home = () => {
@@ -28,7 +29,7 @@ const Home = () => {
                 to="intro"
                 smooth={true}
                 duration={500}
-                className="px-6 py-3 text-base md:text-lg font-medium text-center text-white bg-purple-500 rounded-md cursor-pointer"
+                className="px-6 py-3 text-base md:text-lg font-medium text-center text-white bg-[#56c3bc] rounded-md cursor-pointer"
               >
                 Discover More
               </Link>
@@ -46,12 +47,12 @@ const Home = () => {
           </div>
         </div>
       </Section>
-
-      <Intro></Intro>
-      <Values></Values>
-      <Milestone></Milestone>
-      <Gallery></Gallery>
-      <JoinMethod></JoinMethod>
+      <SocialContacts />
+      <Intro />
+      <Values />
+      <Milestone />
+      <Gallery />
+      <JoinMethod />
     </div>
   );
 };
