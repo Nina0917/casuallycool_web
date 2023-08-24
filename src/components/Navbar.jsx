@@ -2,20 +2,16 @@ import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import Logo from "../assets/avatar_no_background.png";
 import {
-
   Bars3Icon,
   XMarkIcon,
   UserPlusIcon,
   CubeTransparentIcon,
   FaceSmileIcon,
-  GlobeAltIcon
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Member from './Member'
-import Video from './Video'
-
-
-
+  GlobeAltIcon,
+} from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Member from "./Member";
+import Video from "./Video";
 
 // const products = [
 //     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -26,7 +22,6 @@ import Video from './Video'
 // ]
 
 const events = [
-
   {
     name: "Audition Season",
     description: "Join our executive team through an audition",
@@ -77,7 +72,7 @@ const Navbar = ({ onEventClick }) => {
               <a className="-m-1.5 p-1.5 href=home">
                 <span className="sr-only">Your Company</span>
                 {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
-                <img src={Logo} alt="logo" style={{ width: "90px" }} />
+                <img src={Logo} alt="logo" href="#" style={{ width: "90px" }} />
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -159,32 +154,30 @@ const Navbar = ({ onEventClick }) => {
                 </Transition>
               </Popover>
 
-
               <a
                 href="Member"
-
                 onClick={(e) => {
                   e.preventDefault();
-                  onEventClick('Member');
+                  onEventClick("Member");
                 }}
-
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Member
               </a>
               <a
                 href="Videos"
-
                 onClick={(e) => {
                   e.preventDefault();
-                  onEventClick('Video');
+                  onEventClick("Video");
                 }}
-
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Videos
               </a>
-              <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+              <a
+                href="#"
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
                 Contact
               </a>
             </Popover.Group>
@@ -197,7 +190,12 @@ const Navbar = ({ onEventClick }) => {
           </div>
         </div>
       </nav>
-      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
@@ -227,7 +225,10 @@ const Navbar = ({ onEventClick }) => {
                       <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
                         Events
                         <ChevronDownIcon
-                          className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
+                          className={classNames(
+                            open ? "rotate-180" : "",
+                            "h-5 w-5 flex-none"
+                          )}
                           aria-hidden="true"
                         />
                       </Disclosure.Button>
@@ -250,8 +251,8 @@ const Navbar = ({ onEventClick }) => {
                   href="Member"
                   onClick={(e) => {
                     e.preventDefault();
-                    onEventClick('Member');
-                    console.log("go to member")
+                    onEventClick("Member");
+                    console.log("go to member");
                   }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
@@ -262,8 +263,8 @@ const Navbar = ({ onEventClick }) => {
                   href="Video"
                   onClick={(e) => {
                     e.preventDefault();
-                    onEventClick('Video');
-                    console.log("go to video")
+                    onEventClick("Video");
+                    console.log("go to video");
                   }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
@@ -277,13 +278,12 @@ const Navbar = ({ onEventClick }) => {
                   Contact
                 </a>
               </div>
-
             </div>
           </div>
         </Dialog.Panel>
       </Dialog>
     </header>
-  )
-}
+  );
+};
 
 export default Navbar;

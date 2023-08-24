@@ -1,5 +1,5 @@
 import React from "react";
-
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 const Gallery = (props) => {
   //   <a href="https://ibb.co/tPFVcNN"><img src="https://i.ibb.co/Hp35YMM/image1.jpg" alt="image1" border="0"></a>
   // <a href="https://ibb.co/G08H4Zr"><img src="https://i.ibb.co/bPCbM4G/image2.jpg" alt="image2" border="0"></a>
@@ -36,92 +36,91 @@ const Gallery = (props) => {
   // <a href="https://ibb.co/9Ts1J11"><img src="https://i.ibb.co/qskczcc/image33.jpg" alt="image33" border="0"></a>
   const images_1 = [
     {
-      id: 1,
       img: "https://i.ibb.co/Hp35YMM/image1.jpg",
       alt: "image1",
     },
     {
-      id: 2,
       img: "https://i.ibb.co/bPCbM4G/image2.jpg",
       alt: "image2",
     },
     {
-      id: 3,
       img: "https://i.ibb.co/qC5WFVj/image3.jpg",
       alt: "image3",
     },
-  ];
-  const images_2 = [
     {
-      id: 1,
       img: "https://i.ibb.co/Jvf3HPR/image4.jpg",
       alt: "image4",
     },
     {
-      id: 2,
       img: "https://i.ibb.co/W3SvzQS/image5.jpg",
       alt: "image5",
     },
     {
-      id: 3,
+      img: "https://i.ibb.co/gtxsJSX/image6.jpg",
+      alt: "image6",
+    },
+    {
+      img: "https://i.ibb.co/Hp35YMM/image1.jpg",
+      alt: "image1",
+    },
+    {
+      img: "https://i.ibb.co/bPCbM4G/image2.jpg",
+      alt: "image2",
+    },
+    {
+      img: "https://i.ibb.co/qC5WFVj/image3.jpg",
+      alt: "image3",
+    },
+    {
+      img: "https://i.ibb.co/Jvf3HPR/image4.jpg",
+      alt: "image4",
+    },
+    {
+      img: "https://i.ibb.co/W3SvzQS/image5.jpg",
+      alt: "image5",
+    },
+    {
       img: "https://i.ibb.co/gtxsJSX/image6.jpg",
       alt: "image6",
     },
   ];
-  const images_3 = [
-    {
-      id: 1,
-      img: "https://i.ibb.co/xYDg0ks/image7.jpg",
-      alt: "image7",
-    },
-    {
-      id: 2,
-      img: "https://i.ibb.co/D43yKRS/image8.jpg",
-      alt: "image8",
-    },
-    {
-      id: 3,
-      img: "https://i.ibb.co/kHDjNW0/image9.jpg",
-      alt: "https://nodejs.org/en/",
-    },
-  ];
-  const images_4 = [
-    {
-      id: 1,
-      img: "https://i.ibb.co/bPhrzV6/image10.jpg",
-      alt: "https://nodejs.org/en/",
-    },
-    {
-      id: 2,
-      img: "https://i.ibb.co/dL4HNh2/image11.jpg",
-      alt: "https://nodejs.org/en/",
-    },
-    {
-      id: 3,
-      img: "https://i.ibb.co/3T92C2r/image12.jpg",
-      alt: "https://nodejs.org/en/",
-    },
-  ];
 
-  function ColumnGallery({ images }) {
-    return (
-      <div class="grid gap-4">
-        {images.map(({ id, img, alt }) => (
-          <div key={id}>
-            <img class="h-auto max-w-full" src={img} alt={alt} />
-          </div>
-        ))}
-      </div>
-    );
-  }
+  const slideLeft = () => {
+    var slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft - 500;
+  };
 
+  const slideRight = () => {
+    var slider = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
   return (
-    <div class="grid py-20 grid-cols-2 md:grid-cols-4 gap-4">
-      <ColumnGallery images={images_1}></ColumnGallery>
-      <ColumnGallery images={images_2}></ColumnGallery>
-      <ColumnGallery images={images_3}></ColumnGallery>
-      <ColumnGallery images={images_4}></ColumnGallery>
-    </div>
+    <>
+      <div className="relative flex items-center py-14">
+        <MdChevronLeft
+          className="opacity-50 cursor-pointer hover:opacity-100"
+          onClick={slideLeft}
+          size={40}
+        />
+        <div
+          id="slider"
+          className="w-full h-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+        >
+          {images_1.map(({ img, alt }) => (
+            <img
+              class="w-[320px] h-[240px] overflow-hidden inline-block p-2 cursor-pointer hover:scale-105  ease-in-out duration-300"
+              src={img}
+              alt={alt}
+            />
+          ))}
+        </div>
+        <MdChevronRight
+          className="opacity-50 cursor-pointer hover:opacity-100"
+          onClick={slideRight}
+          size={40}
+        />
+      </div>
+    </>
   );
 };
 

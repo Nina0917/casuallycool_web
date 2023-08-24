@@ -7,7 +7,7 @@ const JoinMethod = () => {
         <div className="">
           <div className="flex justify-center items-center pb-6">
             <img
-              src="https://i.ibb.co/D1TGg2Y/2231692307391-pic.png"
+              src="https://i.ibb.co/qskczcc/image33.jpg"
               width="200"
               className={"object-cover"}
               alt="Dance Doodle"
