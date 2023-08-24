@@ -19,7 +19,7 @@ function AuditionEvent() {
                         <div className='mt-6 flex items-center'>
                             <ClockIcon className="inline h-6 w-6 mr-1" />
                             <span className=' inline-block text-gray-900 align-text-bottom'>
-                                September 17th
+                                September 27th
                             </span>
                         </div>
 
@@ -32,6 +32,7 @@ function AuditionEvent() {
                 <div className='-mx-4 sm:-mx-12 lg:mx-0'> {/* paragraphs container*/}
 
                     <div className='mx-auto max-w-3xl space-y-12 py-12 px-4 text-gray-600 sm:px-12 xl:px-0'>
+
                         <div className="space-y-4">
                             <p>Whether you aspire to be a part of Team Cool, wish to participate in dance performances or video shootings, or even dream of joining our competitive team to represent CasuallyCool in various dance competitions, we welcome you to join us for the auditions.</p>
                             <p>To accommodate everyone's preferences and ensure a diverse range of talent, we have opened up two options for auditioning. You can choose the format that suits you best:</p>
@@ -40,12 +41,37 @@ function AuditionEvent() {
                         <div class="space-y-6 border-b pb-6 border-gray-300">
 
                             <div className="space-y-4">
-                                <p>1. Present a Choreography Performance: Prepare a choreographed piece of your choice, lasting between 40 to 60 seconds. This allows you to showcase your individual style and creativity.</p>
-                                <p>2.  Chore Learning on the Spot: Our talented choreographer will teach a choreography on the day of the audition. Participants will learn the same choreography during the teaching period and then perform it for evaluation. </p>
+                                <h2 className="text-1xl font-semibold text-gray-800 md:text-2xl">Join Team Cool (performance team)</h2>
+                                <p>
+                                    Prepare a choreographed piece of your choice, lasting between 40 to 60 seconds. This allows you to showcase your individual style and creativity.
+                                    Submit the video online via the team cool application link (located in our Instagram bio <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a>).
+                                </p>
+
+                                <p>
+                                    We’re actively recruiting dancers to join this team and we will evaluate the audition results on a monthly basis aiming to open up more opportunities for dancers to perform on stage - feel free to submit your
+                                    application/get ready to reapply anytime during each month!
+                                </p>
+
+                                <h2 className="text-1xl font-semibold text-gray-800 md:text-2xl">Join Competition Team (branch of Team Cool)</h2>
+                                <p>
+                                    Auditions for the 2023-2024 Competition team will be held twice this year with a similar format for fall and
+                                    winter. The fall audition will be Wednesday <span class="font-semibold">September 27th 8:30 to 10:30 pm at ARC Studio 4</span>, and the winter audition will
+                                    be at the beginning of <span class="font-semibold">January</span>.
+                                </p>
+
+                                <p>
+                                    The audition design was crafted to be flexible and accommodate many situations. The in-person
+                                    component, where the directors will teach a choreography ranging from 30 to 60 seconds, is the most heavily weighted part. However, the optional multi-video component
+                                    allows an auditonee to submit videos even after the in-person deadline to maximise their potential and showcase their desires.
+                                </p>
+                                <p>
+                                    For a more detailed format, please
+                                    visit <span class="font-semibold">@casuallycooldance</span> on instagram for all related documents and registration forms!
+                                </p>
                             </div>
                         </div>
 
-                        <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">Stay tuned to our Instagram for announcements and updates, and join our Discord server to engage with our community and receive real-time updates on audition information and timings.</h2>
+
 
 
                     </div>
