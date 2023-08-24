@@ -10,16 +10,6 @@ import {
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import Member from "./Member";
-import Video from "./Video";
-
-// const products = [
-//     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-//     { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-//     { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-//     { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlu sIcon },
-//     { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-// ]
 
 const events = [
   {
@@ -48,11 +38,6 @@ const events = [
   },
 ];
 
-// const callsToAction = [
-//     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-//     { name: 'Contact sales', href: '#', icon: PhoneIcon },
-// ]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -72,7 +57,10 @@ const Navbar = ({ onEventClick }) => {
               <a className="-m-1.5 p-1.5 href=home">
                 <span className="sr-only">Your Company</span>
                 {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
-                <img src={Logo} alt="logo" href="#" style={{ width: "90px" }} />
+                <a href="http://localhost:3000/" class="cursor-pointer">
+                  <img src={Logo} alt="logo" href="#" style={{ width: "90px" }} />
+                </a>
+
               </a>
             </div>
             <div className="flex lg:hidden">
