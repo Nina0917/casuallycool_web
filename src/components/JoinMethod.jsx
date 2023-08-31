@@ -1,25 +1,25 @@
 import Section from "./Section";
 
 const JoinMethod = () => {
-  function Card({ title, description }) {
+  function Card({ title, img, description }) {
     return (
       <>
         <div className="">
           <div className="flex justify-center items-center pb-6">
             <img
-              src="https://i.ibb.co/qskczcc/image33.jpg"
-              width="200"
+              src={img}
+              width="330"
               className={"object-cover"}
               alt="Dance Doodle"
             />
           </div>
 
           {/* <!-- Pricing Card --> */}
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-            <h3 class="mb-4 text-2xl font-semibold">{title}</h3>
-            <div className="flex items-center mb-8 space-y-4 text-left space-x-3">
-              <p>{description}</p>
+          <div class="flex flex-col p-6 mx-auto max-w-lg text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+            <div className="flex text-center">
+              <h3 class="mb-4 text-2xl font-semibold">{title}</h3>
             </div>
+            {description}
           </div>
         </div>
       </>
@@ -29,22 +29,67 @@ const JoinMethod = () => {
   return (
     <>
       {/* ------ Join Methods ------- */}
-      <Section className="pb-20 px-16" title="How to Join Us">
+      <Section className="pb-20 px-12" title="How to Join Us">
         <div class="px-4 max-w-screen-xl lg:px-6">
           <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
             <Card
               title="Dance Class Trials"
-              description="Dance class trials will be held at the beginning of the fall/winter term. If you are unsure about your dancing abilities, we encourage you to join the class trial sessions before the official courses are launched!
-"
+              img="https://i.ibb.co/mCY9tY8/image9.jpg"
+              description={
+                <ul class="list-disc">
+                  <li>Held at the beginning of the fall/winter term.</li>
+                  <li>
+                    Encourages participation in trial sessions for uncertain
+                    dancers.
+                  </li>
+                  <li>
+                    Provides a chance to assess dancing abilities before
+                    official courses.
+                  </li>
+                  <li>
+                    Helps individuals make informed decisions about joining the
+                    classes.
+                  </li>
+                </ul>
+              }
             ></Card>
             <Card
               title="Scheduled Classes"
-              description="We offer two classes per week: K-pop and choreography. The drop-in fee for each class is $5. By paying the class fee, you are directly supporting our ability to rent the dance studios at ARC.
-              "
+              img="https://i.ibb.co/w6h6ZKD/image21.jpg"
+              description={
+                <ul class="list-disc">
+                  <li>Offers two weekly classes: K-pop and choreography.</li>
+                  <li>Each class has a drop-in fee of $5.</li>
+                  <li>Payment supports rental of dance studios at ARC.</li>
+                  <li>
+                    Flexibility for attendees to choose classes based on
+                    preferences.
+                  </li>
+                </ul>
+              }
             ></Card>
             <Card
               title="Audition Season"
-              description="Our audition season is designed to seek out highly motivated dancers who are eager to join our esteemed Team Cool (executive team). You will have the opportunity to participate in exhilarating dance performances, exciting video shootings, and even become part of our competitive team, representing CasuallyCool in a wide range of dance competitions."
+              img="https://i.ibb.co/vjNs6DG/image31.jpg"
+              description={
+                <ul class="list-disc">
+                  <li>Designed to discover dedicated dancers for Team Cool.</li>
+                  <li>
+                    Involves exciting dance performances and video shoots.
+                  </li>
+                  <li>
+                    Opportunity to join the competitive team for various dance
+                    competitions.
+                  </li>
+                  <li>
+                    Represents CasuallyCool in a wide range of dance events.
+                  </li>
+                  <li>
+                    Ideal for highly motivated dancers seeking greater
+                    challenges.
+                  </li>
+                </ul>
+              }
             ></Card>
           </div>
         </div>

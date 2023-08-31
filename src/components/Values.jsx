@@ -24,12 +24,16 @@ const Values = () => {
                 Shared Values & Commitment
               </h1>
             </div>
-            <div className="py-5 text-base md:pl-10 lg:pl-0 text-gray-500">
-              <p>Equity, Diversity & Inclusion (EDI) Awareness</p>
-              <p>
-                Zero-Tolerance Policy towards Any forms of discrimination,
-                sexual harassment, or racism
-              </p>
+            <div className="py-5 text-base md:pl-20 lg:pl-20 text-gray-500">
+              <ul className="list-disc">
+                <li className="pb-4">
+                  Equity, Diversity & Inclusion (EDI) Awareness
+                </li>
+                <li>
+                  Zero-Tolerance Policy towards Any forms of discrimination,
+                  sexual harassment, or racism
+                </li>
+              </ul>
             </div>
           </div>
         </div>
