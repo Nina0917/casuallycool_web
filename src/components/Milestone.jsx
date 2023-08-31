@@ -46,54 +46,46 @@ const Milestone = (props) => {
     <Section divider="true" title="Milestone">
       <div className="space-y-8 w-full relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
         <MilestoneItem
-          id="1"
-          title="1"
-          date="April 2022"
-          description="We got the general idea of CCDC after some meetings among the co-founders. April 11th is the club’s birthday!"
-        ></MilestoneItem>
-        <MilestoneItem
           id="2"
-          title="2"
-          date="Sep 2022"
-          description="Started to plan out our very first event (Random Play Dance - Kpop) happening in front of Ontario Hall where we had a surprising turnout, got to meet a lot of you, and officially introduced us to the public!! The support from everyone in that event gave us confidence to build this club (thank uuuuu all 3>) 
-          "
+          title="Birth of CCDC"
+          date="April 2022"
+          description="Our journey began with brainstorming sessions among our co-founders, culminating in the establishment of the club on April 11th. This marked the inception of the Creative Cultural Dance Club (CCDC), a space for our shared passion."
         ></MilestoneItem>
+        {/* <MilestoneItem
+          id="2"
+          title="Kpop Dance Party"
+          date="Sep 2022"
+          description="We embarked on our first event, the Random Play Dance - Kpop, held in front of Ontario Hall. To our delight, the turnout exceeded expectations. This event served as our official introduction to the public, and the overwhelming support bolstered our confidence to further develop the club."
+        ></MilestoneItem> */}
         <MilestoneItem
           id="3"
-          title="3"
+          title="Expanding & Collaborations"
           date="Oct 2022"
-          description="Attended our first performance off-campus for the Kpop Club Night, participated in the very first Kingston freestyle battle at Kingston School of Dance, and also started our collaborations with other clubs on campus performing at different locations on campus and co-hosting events to raise funds for social causes.
-          "
+          description="We took our enthusiasm off-campus, participating in the Kpop Club Night and the Kingston School of Dance freestyle battle. Collaborations with other campus clubs began, leading to performances in various locations and joint events that aimed to raise funds for social causes."
         ></MilestoneItem>
         <MilestoneItem
           id="4"
-          title="4"
+          title="Launching Recurring Classes"
           date="Nov 2022"
-          description="Officially started to offer recurring classes - 1 choreo class and 1 Kpop class per week! 
-          Those Wednesday evenings have always been a motivation boost of the week for all of our executives because of seeing you guys there!          
-          "
+          description="In response to popular demand, we initiated regular classes - one choreography class and one Kpop class per week. These weekly gatherings not only improved our skills but also became a source of motivation and excitement for both our team and the participants."
         ></MilestoneItem>
         <MilestoneItem
           id="5"
-          title="5"
+          title="Recognition & Financial Boost"
           date="Nov 2022"
-          description="Won the Awesome Kingston Awards of the month and received a bridging grant. 
-          It helped with our initial startup costs in hosting dance tutorials/classes, renting dance studios, running events, and participating in dance battles and competitions.                    
-          "
+          description="Our efforts were acknowledged when we won the Awesome Kingston Awards and secured a bridging grant. This financial support played a crucial role in covering initial expenses related to tutorials, studio rentals, events, and competitions, fortifying our foundation."
         ></MilestoneItem>
         <MilestoneItem
           id="6"
-          title="6"
+          title="Attend Reach Competition"
           date="Mar 2023"
-          description="The CCDC 2023 competition roaster attended the Reach Competition on behalf of Queen’s, which is an annual street dance competition among Canadian Universities. We presented a choreography performance of our instructor’s own work with our theme focused on finding our own identities along the journey of creating our club! By initiating this, we wanted to encourage everyone through our actions to follow their passion, keep learning, focus on the progress to really experience it, and be open to opportunities. Together as CCDC, we wish to bring the street dance styled competition element back to Queens after a period of disconnection for a few years. By presenting ourselves at Reach, we reconnected with the dance communities at other institutions and received cheers and support from both dancers of the day and the audience - a forever grateful trial and more to come this year! 
-
-          "
+          description="Representing Queen's University, our CCDC 2023 competition team shone at the Reach Competition. Our performance, centered around the theme of self-discovery and growth, resonated with the audience and fellow dancers. We aimed to inspire a passion for learning, embracing progress, and seizing opportunities, rekindling the street dance spirit at Queen's."
         ></MilestoneItem>
         <MilestoneItem
           id="7"
-          title="CCDC RECITAL!"
+          title="CCDC Recital"
           date="Apr 2023"
-          description="As executives, we were shedding tears watching everyone enjoy dancing and presented such a beautiful performance while the audience was so supportive cheering each dancer on. It made us feel like our dream came true - to build a place where people can just have fun and enjoy dance as a new hobby, a passion, or an expressive art form."
+          description="A heartfelt culmination of our efforts, the CCDC Recital in April 2023 was a sight to behold. Tears of joy flowed as both dancers and audience members experienced the joy of dance. Our dream of fostering a space for people to revel in dance as a hobby, passion, and expressive art form came to fruition, reaffirming our mission's success."
         ></MilestoneItem>
       </div>
     </Section>
