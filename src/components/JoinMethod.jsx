@@ -33,7 +33,7 @@ const JoinMethod = () => {
         <div class="px-4 max-w-screen-xl lg:px-6">
           <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
             <Card
-              title="Dance Class Trials"
+              title="Dance Trial Classes"
               img="https://i.ibb.co/mCY9tY8/image9.jpg"
               description={
                 <ul class="list-disc">

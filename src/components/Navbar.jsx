@@ -19,7 +19,7 @@ const events = [
     icon: UserPlusIcon,
   },
   {
-    name: "Class Trial",
+    name: "Trial Classes",
     description: "Free Trial Class week for new dancers",
     href: "#",
     icon: CubeTransparentIcon,
@@ -162,12 +162,7 @@ const Navbar = ({ onEventClick }) => {
               >
                 Videos
               </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Contact
-              </a>
+
             </Popover.Group>
             {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
 
