@@ -18,13 +18,13 @@ export default function Footer() {
               <li className="flex items-center mb-3">
                 <ArrowTopRightOnSquareIcon className="text-gray-400 h-6 w-6 inline"></ArrowTopRightOnSquareIcon>
                 <a
-                  href="#"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScPG6-hkEi2OUrNrxsUaZxOdsSEnYQv6sKpG-dykJuGD-yV8w/viewform"
                   class="ml-4 text-md text-gray-400 hover:underline md:ml-6 dark:text-gray-400"
                 >
                   Weekly Dance Classes’ Feedback
                 </a>
               </li>
-              <li className="flex items-center">
+              {/* <li className="flex items-center">
                 <ArrowTopRightOnSquareIcon className="text-gray-400 h-6 w-6 inline"></ArrowTopRightOnSquareIcon>
                 <a
                   href="#"
@@ -32,7 +32,7 @@ export default function Footer() {
                 >
                   Performance Opportunities
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

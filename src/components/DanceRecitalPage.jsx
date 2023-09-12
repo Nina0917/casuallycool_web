@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AudImg from "../assets/t.jpg";
+import RecitalBackground from "../assets/ImageGallery/image33.jpg";
 import {
     ClockIcon
 } from '@heroicons/react/24/outline'
@@ -19,7 +20,7 @@ function DanceRecital() {
                         <div className='mt-6 flex items-center'>
                             <ClockIcon className="inline h-6 w-6 mr-1" />
                             <span className=' inline-block text-gray-900 align-text-bottom'>
-                                April 7th
+                                End of School Year
                             </span>
                         </div>
                     </div>
@@ -29,12 +30,16 @@ function DanceRecital() {
 
                 <div className='-mx-4 sm:-mx-12 lg:mx-0'> {/* paragraphs container*/}
 
-
-
                     <div className='mx-auto max-w-3xl space-y-12 py-12 px-4 text-gray-600 sm:px-12 xl:px-0'>
+                        <img src={RecitalBackground} alt="logo" />
                         <div className="space-y-4">
-                            <p>If you are interested in performing at the recital, please submit the following details to <span class="font-semibold">casuallycooldance@gmail.com</span></p>
-                            <p>Note that: Sound Check is at 4pm, show starts at 5pm</p>
+                            <p>If you are interested in performing at the recital, please submit the following details to <span class="font-semibold">casuallycooldance@gmail.com </span>
+                                by the deadline we will propose on the recital poster in the Winter semester.</p>
+                            <p>
+                                The recital will take place closer to the end of each school year. Please
+                                stay tuned for it and these are the materials we would need from you as our recital performer:
+                            </p>
+
                         </div>
 
 
@@ -46,7 +51,7 @@ function DanceRecital() {
                                 <p>3. Short blurb or intro of your performance/anything u would like the MC to say to the audience</p>
                                 <p>4. music file (most important)</p>
                                 <p>5. Any preference on your show order if you have schedule conflicts that you have to leave early</p>
-                                <p>6. Estimated length of your performance please</p>
+                                <p>6. Estimated length of your performance</p>
                             </div>
                         </div>
 

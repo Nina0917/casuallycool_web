@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import AudImg from "../assets/t.jpg";
+import ClassTrialBackground from "../assets/ImageGallery/image28.jpg";
 import {
     ClockIcon
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
+
 
 function ClassTrial() {
     return (
@@ -13,13 +15,13 @@ function ClassTrial() {
                     <div className='flex flex-col w-2/5 xl:w-1/3'>
                         <div>
                             <h1 className='text-4xl font-bold text-gray-900'>
-                                ClassTrial
+                                Trial Classes
                             </h1>
                         </div>
                         <div className='mt-6 flex items-center'>
                             <ClockIcon className="inline h-6 w-6 mr-1" />
                             <span className=' inline-block text-gray-900 align-text-bottom'>
-                                October 26th & November 2nd
+                                October & November
                             </span>
                         </div>
                     </div>
@@ -32,23 +34,20 @@ function ClassTrial() {
 
 
                     <div className='mx-auto max-w-3xl space-y-12 py-12 px-4 text-gray-600 sm:px-12 xl:px-0'>
+                        <img src={ClassTrialBackground} alt="logo" />
+
                         <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">THREE POINTS TO REMEMBER!</h2>
 
-
-                        <div class="space-y-6 border-b pb-6 border-gray-300">
+                        <div class="space-y-6 pb-6 border-gray-300">
 
                             <div className="space-y-4">
-                                <p>1.You MUST pre-register for <span class="font-semibold">EACH</span> class you want to attend! Each class has its <span class="font-semibold">OWN</span> google form which is in the <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a> in the bio.
+                                <p>1. You MUST pre-register for <span class="font-semibold">EACH</span> class you want to attend! Each class has its <span class="font-semibold">OWN</span> google form which is in the <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a> in the bio.
                                     (Ex. To attend two classes, you must register for each class on their OWN google form.</p>
-                                <p>2. It costs <span class="font-semibold">$2</span> cash at the door OR alternatively, you can e-transfer $2 pre-advance to <span class="font-semibold">17cx9@queensu.ca</span> </p>
-                                <p>3. CLEARER INSTRUCTIONS ARE ON THE GOOGLE FORM WHICH IS LOCATED ON THE <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a> IN OUR
-                                    <a href="https://www.instagram.com/casuallycooldance/?hl=en" class="text-blue-600 visited:text-purple-600">INSTAGRAM</a> SO PLEASE FOLLOW THE PROCEDURES CAREFULLY!</p>
+                                <p>2. Here, you will get a gist of the dance styles we will be doing throughout the year and get to know our instructors and perhaps some new friends!</p>
+                                <p>2. CLEARER INSTRUCTIONS ARE ON THE GOOGLE FORM WHICH IS LOCATED ON THE <a href="https://linktr.ee/casuallycooldance" class="text-blue-600 visited:text-purple-600">LINKTREE</a> IN OUR
+                                    <a href="https://www.instagram.com/casuallycooldance/?hl=en" class="text-blue-600 visited:text-purple-600"> INSTAGRAM</a> SO PLEASE FOLLOW THE PROCEDURES CAREFULLY!</p>
                             </div>
                         </div>
-
-                        <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">See you soon!</h2>
-
-
                     </div>
 
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AudImg from "../assets/t.jpg";
+import RPDBackground from "../assets/ImageGallery/image25.jpg";
 import {
     ClockIcon
 } from '@heroicons/react/24/outline';
@@ -18,9 +19,9 @@ function RPD() {
                         </div>
                         <div className='mt-6 flex items-center'>
                             <ClockIcon className="inline h-6 w-6 mr-1" />
-                            {/* <span className=' inline-block text-gray-900 align-text-bottom'>
-                                Dec. 2nd
-                            </span> */}
+                            <span className=' inline-block text-gray-900 align-text-bottom'>
+                                Anytime!
+                            </span>
                         </div>
                     </div>
                     <div> <img src={AudImg} alt="logo" /></div>
@@ -30,6 +31,7 @@ function RPD() {
                 <div className='-mx-4 sm:-mx-12 lg:mx-0'> {/* paragraphs container*/}
 
                     <div className='mx-auto max-w-3xl space-y-12 py-12 px-4 text-gray-600 sm:px-12 xl:px-0'>
+                        <img src={RPDBackground} alt="logo"></img>
                         <h2 className="text-2xl font-bold text-gray-800 md:text-3xl">K-Pop Random Play Dance is backkk!!</h2>
                         <div className="space-y-4">
                             <p>Our Random Dance Play activity is an exhilarating experience that lets you unleash your inner dancer while jamming to a dynamic mix of KPOP tracks.

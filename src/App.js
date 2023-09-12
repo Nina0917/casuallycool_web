@@ -23,7 +23,7 @@ function App() {
       setDisplayedComponent(<Home />);
     } else if (componentName === 'Audition Season') {
       setDisplayedComponent(<Audition />);
-    } else if (componentName === 'Class Trial') {
+    } else if (componentName === 'Trial Classes') {
       setDisplayedComponent(<ClassTrail />);
 
     } else if (componentName === 'Member') {
