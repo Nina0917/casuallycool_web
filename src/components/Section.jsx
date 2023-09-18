@@ -13,9 +13,8 @@ const Section = (props) => {
       )}
 
       <div
-        className={`container px-32 mx-auto flex flex-wrap ${
-          props.className ? props.className : ""
-        }`}
+        className={`container px-32 mx-auto flex flex-wrap ${props.className ? props.className : ""
+          }`}
       >
         {props.children}
       </div>
