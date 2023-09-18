@@ -60,6 +60,7 @@ const Navbar = ({ onEventClick }) => {
             <div className="flex lg:flex-1">
               <a className="-m-1.5 p-1.5 href=home">
                 <span className="sr-only">Your Company</span>
+
                 {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
                 <Link to="/" class="cursor-pointer">
                   <img src={Logo} alt="logo" href="#" style={{ width: "90px" }} />
