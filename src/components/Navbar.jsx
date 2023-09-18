@@ -1,4 +1,7 @@
+import React from 'react';
 import { Fragment, useState } from "react";
+import { Link } from 'react-router-dom';
+
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import Logo from "../assets/avatar_no_background.png";
 import {
@@ -11,29 +14,31 @@ import {
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
+
+
 const events = [
   {
     name: "Audition Season",
     description: "Join our executive team through an audition",
-    href: "#",
+    href: "/events/audition",
     icon: UserPlusIcon,
   },
   {
     name: "Trial Classes",
     description: "Free Trial Class week for new dancers",
-    href: "#",
+    href: "/events/classTrial",
     icon: CubeTransparentIcon,
   },
   {
     name: "Dance Recital",
     description: "Come to see our annual dance recital",
-    href: "#",
+    href: "/events/danceRecital",
     icon: FaceSmileIcon,
   },
   {
     name: "RPD",
     description: "Random Dance Challenge for your favourite KPOP sons",
-    href: "#",
+    href: "/events/RPD",
     icon: GlobeAltIcon,
   },
 ];
@@ -44,33 +49,33 @@ function classNames(...classes) {
 
 const Navbar = ({ onEventClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const handleClick = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  }
   return (
     <header>
-      <nav
-        id="navbar"
-        className="fixed z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue"
-        aria-label="Global"
-      >
+      <nav id="navbar" className="fixed z-20 w-full border-b border-gray-100 bg-white/80 backdrop-blue" aria-label="Global">
         <div id="navbar-center" className="mx-auto px-4 sm:px-12 xl:max-w-6xl">
           <div className="relative flex flex-wrap items-center justify-between gap-6 lg:gap-0 lg:py-4">
             <div className="flex lg:flex-1">
               <a className="-m-1.5 p-1.5 href=home">
                 <span className="sr-only">Your Company</span>
                 {/* <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
-                <a href="http://localhost:3000/" class="cursor-pointer">
+                <Link to="/" class="cursor-pointer">
                   <img src={Logo} alt="logo" href="#" style={{ width: "90px" }} />
-                </a>
+                </Link>
 
               </a>
             </div>
             <div className="flex lg:hidden">
               <button
                 type="button"
-                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(true)}
+                className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 z-5"
+                onClick={handleClick}
               >
                 <span className="sr-only">Open main menu</span>
-                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                {mobileMenuOpen ? <Bars3Icon className="h-6 w-6" aria-hidden="true" /> : <XMarkIcon className="h-6 w-6" aria-hidden="true" />}
+
               </button>
             </div>
 
@@ -109,8 +114,8 @@ const Navbar = ({ onEventClick }) => {
                             />
                           </div>
                           <div className="flex-auto">
-                            <a
-                              href={item.href}
+                            <Link
+                              to={item.href}
                               className="block font-semibold text-gray-900"
                             >
                               {item.name}
@@ -118,7 +123,7 @@ const Navbar = ({ onEventClick }) => {
                                 className="absolute inset-0"
                                 onClick={() => onEventClick(item.name)}
                               />
-                            </a>
+                            </Link>
                             <p className="mt-1 text-gray-600">
                               {item.description}
                             </p>
@@ -126,42 +131,22 @@ const Navbar = ({ onEventClick }) => {
                         </div>
                       ))}
                     </div>
-                    {/* <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                                    {callsToAction.map((item) => (
-                                        <a
-                                            key={item.name}
-                                            href={item.href}
-                                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                                        >
-                                            <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
-                                            {item.name}
-                                        </a>
-                                    ))}
-                                </div> */}
                   </Popover.Panel>
                 </Transition>
               </Popover>
 
-              <a
-                href="Member"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onEventClick("Member");
-                }}
+              <Link
+                to="/members"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Member
-              </a>
-              <a
-                href="Videos"
-                onClick={(e) => {
-                  e.preventDefault();
-                  onEventClick("Video");
-                }}
+              </Link>
+              <Link
+                to="/videos"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Videos
-              </a>
+              </Link>
 
             </Popover.Group>
             {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -173,98 +158,59 @@ const Navbar = ({ onEventClick }) => {
           </div>
         </div>
       </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
-              />
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        Events
-                        <ChevronDownIcon
-                          className={classNames(
-                            open ? "rotate-180" : "",
-                            "h-5 w-5 flex-none"
-                          )}
-                          aria-hidden="true"
-                        />
+
+      {/* Mobile Menu*/}
+
+      <div className={!mobileMenuOpen ? 'lg:hidden' : 'hidden'}>
+        <div className="fixed inset-y-0 right-0 z-10 w-full bg-white px-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+
+          <div className="space-y-2 pb-6 pt-10">
+            <div className='pt-10'></div>
+            <Disclosure as="div" className="-mx-3">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                    Events
+                    <ChevronDownIcon
+                      className={classNames(
+                        open ? "rotate-180" : "",
+                        "h-5 w-5 flex-none"
+                      )}
+                      aria-hidden="true"
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel className="mt-2 space-y-2">
+                    {[...events].map((item) => (
+                      <Disclosure.Button
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      >
+                        {item.name}
                       </Disclosure.Button>
-                      <Disclosure.Panel className="mt-2 space-y-2">
-                        {[...events].map((item) => (
-                          <Disclosure.Button
-                            key={item.name}
-                            as="a"
-                            href={item.href}
-                            className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                          >
-                            {item.name}
-                          </Disclosure.Button>
-                        ))}
-                      </Disclosure.Panel>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="Member"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onEventClick("Member");
-                    console.log("go to member");
-                  }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Team
-                </a>
+                    ))}
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+            <Link
+              to="/members"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+            >
+              Team
+            </Link>
 
-                <a
-                  href="Video"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    onEventClick("Video");
-                    console.log("go to video");
-                  }}
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Videos
-                </a>
-
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Contact
-                </a>
-              </div>
-            </div>
+            <Link
+              to="/videos"
+              className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+            >
+              Videos
+            </Link>
           </div>
-        </Dialog.Panel>
-      </Dialog>
+        </div>
+      </div>
+
     </header>
   );
 };
