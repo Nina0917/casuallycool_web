@@ -182,14 +182,12 @@ const Navbar = ({ onEventClick }) => {
                   </Disclosure.Button>
                   <Disclosure.Panel className="mt-2 space-y-2">
                     {[...events].map((item) => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as="a"
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
-                      </Disclosure.Button>
+                      </Link>
                     ))}
                   </Disclosure.Panel>
                 </>
