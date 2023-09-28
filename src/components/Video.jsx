@@ -131,7 +131,7 @@ function Video() {
                 
 
 <div className="flex justify-center items-stretch">
-  <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-32 p-16 ">
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-32 p-16 ">
     {videos.map((video) => (
       <div key={video.id} className="w-full h-full">
         <div className="max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg flex flex-1 items-stretch flex-col h-ful">
@@ -195,7 +195,7 @@ function Video() {
                     </div></div>
 
 <div className="flex justify-center items-center">
-  <div className="grid grid-cols-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-32 p-16">
+  <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-32 p-16">
     {videos1.map((video) => (
       <div key={video.id} className="w-full">
         <div className="max-w-lg mx-auto rounded-lg overflow-hidden shadow-lg">
